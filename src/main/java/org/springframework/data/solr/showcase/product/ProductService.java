@@ -25,12 +25,12 @@ import org.springframework.data.solr.showcase.product.model.Product;
  */
 public interface ProductService {
 
-	int DEFAULT_PAGE_SIZE = 3;
+    int DEFAULT_PAGE_SIZE = 3;
 
-	Page<Product> findByName(String searchTerm, Pageable pageable);
+    Page<Product> findByName(String searchTerm, Pageable pageable);
 
-	Product findById(String id);
+    Product findById(String id);
 
-	FacetPage<Product> autocompleteNameFragment(String fragment, Pageable pageable);
+    FacetPage<Product> autocompleteNameFragment(String fragment, Pageable pageable);
 
 }

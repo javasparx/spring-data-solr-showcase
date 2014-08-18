@@ -26,12 +26,12 @@ import org.springframework.data.solr.repository.config.EnableSolrRepositories;
  * @author Christoph Strobl
  */
 @Configuration
-@EnableSolrRepositories(basePackages = { "org.springframework.data.solr.showcase.product" }, multicoreSupport = true)
+@EnableSolrRepositories(basePackages = {"org.springframework.data.solr.showcase.product"}, multicoreSupport = true)
 public class SearchContext {
 
-	@Bean
-	public SolrServer solrServer(@Value("${solr.host}") String solrHost) {
-		return new HttpSolrServer(solrHost);
-	}
+    @Bean
+    public SolrServer solrServer(@Value("${solr.host}") String solrHost) {
+        return new HttpSolrServer(solrHost);
+    }
 
 }

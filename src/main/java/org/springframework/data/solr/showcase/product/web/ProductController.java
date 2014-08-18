@@ -15,8 +15,6 @@
  */
 package org.springframework.data.solr.showcase.product.web;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.solr.showcase.product.ProductService;
@@ -26,6 +24,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author Christoph Strobl
  */
@@ -34,17 +34,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Scope("prototype")
 public class ProductController {
 
-	private ProductService productService;
+    private ProductService productService;
 
-	@RequestMapping("/product/{id}")
-	public String search(Model model, @PathVariable("id") String id, HttpServletRequest request) {
-		model.addAttribute("product", productService.findById(id));
-		return "product";
-	}
+    @RequestMapping("/product/{id}")
+    public String search(Model model, @PathVariable("id") String id, HttpServletRequest request) {
+        model.addAttribute("product", productService.findById(id));
+        return "product";
+    }
 
-	@Autowired
-	public void setProductService(ProductService productService) {
-		this.productService = productService;
-	}
+    @Autowired
+    public void setProductService(ProductService productService) {
+        this.productService = productService;
+    }
 
 }
