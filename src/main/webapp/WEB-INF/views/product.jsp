@@ -47,8 +47,8 @@
 
         <div>
             <p>
-                <img ismap="ismap" height="220"
-                     src="http://maps.googleapis.com/maps/api/staticmap?markers=color:green|${product.location.latitude},${product.location.longitude}&zoom=12&size=200x200&sensor=false"/>
+                <img ismap="ismap" height="320"
+                     src="http://maps.googleapis.com/maps/api/staticmap?markers=color:green|${product.location.latitude},${product.location.longitude}&zoom=12&size=400x400&sensor=false"/>
             </p>
         </div>
     </c:if>

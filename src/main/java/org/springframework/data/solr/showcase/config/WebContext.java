@@ -15,8 +15,10 @@
  */
 package org.springframework.data.solr.showcase.config;
 
+import org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -28,7 +30,13 @@ import java.util.List;
  * @author Christoph Strobl
  */
 @Configuration
+@PropertySource("classpath:application.properties")
 public class WebContext {
+
+    @Bean
+    public PropertyPlaceholderAutoConfiguration propertyPlaceholderAutoConfiguration() {
+        return new PropertyPlaceholderAutoConfiguration();
+    }
 
     @Bean
     public WebMvcConfigurerAdapter mvcViewConfigurer() {
@@ -37,7 +45,6 @@ public class WebContext {
 
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-
                 registry.addViewController("/").setViewName("search");
                 registry.addViewController("/monitor").setViewName("monitor");
             }

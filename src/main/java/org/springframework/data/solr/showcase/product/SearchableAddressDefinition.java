@@ -18,13 +18,11 @@ package org.springframework.data.solr.showcase.product;
 /**
  * @author Christoph Strobl
  */
-public interface SearchableProductDefinition extends SearchableBaseDefinition {
+public interface SearchableAddressDefinition extends SearchableBaseDefinition {
 
-    String NAME_FIELD_NAME = "name";
-    String AVAILABLE_FIELD_NAME = "inStock";
-    String LOCATION_FIELD_NAME = "store";
-    String CATEGORIES_FIELD_NAME = "cat";
-    String PRICE_FIELD_NAME = "price";
-    String FEATURES_FIELD_NAME = "features";
+    String STREET_FIELD_NAME = "street";
+    String CITY_FIELD_NAME = "city";
+    String COUNTRY_FIELD_NAME = "country";
+    String ZIP_FIELD_NAME = "zip";
 
 }

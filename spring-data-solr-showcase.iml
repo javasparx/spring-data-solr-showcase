@@ -5,7 +5,18 @@
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/src/main/resources" relative="/" />
         </webroots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/org/springframework/data/solr/showcase/config/SearchContext.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/springframework/data/solr/showcase/config/WebContext.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/springframework/data/solr/showcase/product/ProductRepository.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/springframework/data/solr/showcase/product/ProductServiceImpl.java</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
